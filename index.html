@@ -1062,12 +1062,13 @@ $(document).ready(function(){
 									</div>
 									<div class="col-md-5 wow fadeInRight">
 										<div class="contact-form">
-											<form id="my_form" onsubmit="submitForm(); return false;">
-  <p><input id="n" placeholder="Name" required></p>
-  <p><input id="e" placeholder="Email Address" type="email" required></p>
-  <textarea id="m" placeholder="write your message here" rows="10" required></textarea>
-  <p><input id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
-</form>
+									<form id="my_form" onsubmit="submitForm(); return false;">
+												<input type="text" class="textbox" id="n" placeholder="Name" required>
+												<input type="text" class="textbox" id="e" placeholder="Email Address" required>
+												<textarea id="m" onfocus="this.value= '';" onblur="if (this.value == '') {this.value = 'Message';}" required>Message
+												</textarea>
+												<label class="button-two button-type-two"><p><input id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p></label>
+											</form>
 
 										</div>
 									</div>
