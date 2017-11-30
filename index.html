@@ -47,6 +47,31 @@
 			<script>
 				 new WOW().init();
 			</script>
+            
+                                                        <script>
+function _(id){ return document.getElementById(id); }
+function submitForm(){
+	_("mybtn").disabled = true;
+	_("status").innerHTML = 'please wait ...';
+	var formdata = new FormData();
+	formdata.append( "n", _("n").value );
+	formdata.append( "e", _("e").value );
+	formdata.append( "m", _("m").value );
+	var ajax = new XMLHttpRequest();
+	ajax.open( "POST", "example_parser.php" );
+	ajax.onreadystatechange = function() {
+		if(ajax.readyState == 4 && ajax.status == 200) {
+			if(ajax.responseText == "success"){
+				_("my_form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+			} else {
+				_("status").innerHTML = ajax.responseText;
+				_("mybtn").disabled = false;
+			}
+		}
+	}
+	ajax.send( formdata );
+}
+</script>
  <!--           
 <!-- JQuery for SLIDESHOW-->	
  <!--  	<script>
@@ -108,11 +133,11 @@ $(document).ready(function(){
                                             <!--Italian Menu-->   
                                                     //document.getElementById("home").innerHTML="INIZIO";
                                            <!--Italian About US-->               
-                                                          document.getElementById("aboutUs1").innerHTML = "Dafne Art Project è un fornitore irlandese di servizi legati all'arte per aziende come grandi aziende, piccole imprese, hotel e uffici.";
+                                                          document.getElementById("aboutUs1").innerHTML = "Dafne Art Project e' una societa' irlandese che fornisce servizi correlati all'arte alle imprese, piccole compagnie, uffici professionali e alberghi.";
                                                           
-                                                          document.getElementById("aboutUs2").innerHTML = " Aspiriamo a promuovere l'apprezzamento di forme, colori e disegni che possano cambiare l'atmosfera dei luoghi di lavoro e degli spazi urbani. Il nostro portfolio vanta una gamma di oltre cento artisti internazionali da Londra, Roma, Parigi, Dublino, Amsterdam e Mosca.";
+                                                          document.getElementById("aboutUs2").innerHTML = " Cio` a cui aspiriamo e`incoraggiare l'apprezzamento di nuove forme, colori e design e dimostrare come riescano a cambiare l'atmosfera nei luoghi di lavoro e negli spazi urbani. Il nostro portfolio vanta piu` di cento artisti provenienti dalle principali capitali europee: Londra, Roma, Amsterdam, Parigi, Dublino ect";
                                                           
-                                                          document.getElementById("aboutUs3").innerHTML ="Miriamo a collaborare con architetti, imprese di costruzione e gallerie in Europa per fornire opere d'arte di alto valore, murales, sculture ecc. Ai clienti finali.";
+                                                          document.getElementById("aboutUs3").innerHTML ="Puntiamo a collaborare con architetti, arredatori d'interni e compagnie di costruzione a cui fornire opere d'arte di alto valore, murales, sculture megalitiche ect ai loro clienti.";
                                                         
                                                           document.getElementById("language").style.backgroundImage = "url('images/flags/britishIcon20_16.png')";
                                                           
@@ -1018,9 +1043,11 @@ $(document).ready(function(){
 												</ul>
 												<ul class="contact-list-two">
 												   <li><h5>Work Hours:</h5></li>
-												   <li>Monday-Friday : <span class="bold">09am - 18pm</span></li>
-												   <li>SaturdaY : <span class="bold">09am - 1pm</span></li>
+												   <li>Monday-Sunday : <span class="bold">Irregular Working Hours - Make an Appointment</span></li>
+                                                    <!--
+												   <li>Saturday : <span class="bold">09am - 1pm</span></li>
 												   <li>Sunday : <span class="bold">closed</span></li>
+                                                    -->
 												</ul>
 												<div class="clearfix"> </div>
 										</div>
@@ -1035,25 +1062,13 @@ $(document).ready(function(){
 									</div>
 									<div class="col-md-5 wow fadeInRight">
 										<div class="contact-form">
-											<form  id="fr1" method="post">
-												<input id="tb1" type="text" class="textbox" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-												<input id="tb2" type="text" class="textbox" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
-												<textarea id="tb3" onfocus="this.value= '';" onblur="if (this.value == '') {this.value = 'Message';}">Message
-												</textarea>
-												<label class="button-two button-type-two"><input id="sbm" onclick="sendMail(); return false" type="submit" value="Message"></label>
-											</form>
-                                            <script>
-function sendMail() {
-    var link = "mailto:daphneartproject@hotmail.com"
-             + "&body="+ escape(document.getElementById('tb3').value);
-    /*
-            + "?cc=vadimmalakhovski@hotmail.com"
-             + "&subject=" + escape("This is my subject")
-             + "&body="+ escape("My name is ") + escape(document.getElementById('tb1').value)+ escape(" .")+ escape("My email is ") + escape(document.getElementById('tb2').value)+ escape(" .")+ escape("The content of my message is ") + escape(document.getElementById('tb3').value);
-    */         
+											<form id="my_form" action="/example_parser.php" onsubmit="submitForm(); return false;">
+  <p><input id="n" placeholder="Name" required></p>
+  <p><input id="e" placeholder="Email Address" type="email" required></p>
+  <textarea id="m" placeholder="write your message here" rows="10" required></textarea>
+  <p><input id="mybtn" type="submit" value="Submit Form"> <span id="status"></span></p>
+</form>
 
-    window.location.href = link;
-}                                   </script>
 										</div>
 									</div>
    	                        </div>
