@@ -106,10 +106,9 @@ $(document).ready(function(){
 										</div>
 									</div>
 									<nav class="nav">
-										<a id="menu-toggle" class="anchor-link" href="#"><img src="images/nav.png" alt="" /></a>
-										<ul class="nav-list" id="menu">
-                                         <!-- language button-->
-                                        <button id="language" data-text-swap="English">Italiano</button>
+                                        
+                                                                                                                           
+                                            
                                              <!-- language script-->
                                             <script type="text/javascript">
                                             
@@ -147,17 +146,61 @@ $(document).ready(function(){
                                                     }, false);
  
                                             </script>
-                                            
+                                        
+										<a id="menu-toggle" class="anchor-link" href="#"><img src="images/nav.png" alt="" /></a>
+										<ul class="nav-list" id="menu">
+
+   <!--MENU------------------------------------------------------------------------------------------------------------------------------->                                         
                                             <!--border css  border:1px grey solid; -->
 											<li><a id="home" href="#"><span>Home</span></a></li>
-											<li><a href="#about" class="scroll"><span>About</span></a></li>
-											<li><a href="#gallery" class="scroll"><span>Gallery</span></a></li>
+											<li><a href="#about" class="scroll"><span>About US</span></a></li>
+											<li><a href="#gallery" class="scroll"><span>Galleries</span></a></li>
 											<!-- logo -->
 											 <li class="logo"><a href="index.html"><img src="images/logo.png" alt=""/></a></li>
 											<!-- logo -->
-											<li><a href="#faq" class="scroll"><span>Faq</span></a></li>
-											<li><a href="#find" class="scroll"><span>Find Us</span></a></li>
-											<li><a href="#contact" class="scroll"><span>Contact</span></a></li>
+											<li><a href="#faq" class="scroll"><span>Services</span></a></li>
+            <!--href="#contact"-->			<li><a href="#find" class="scroll"><span>Contact</span></a></li>
+                                            <!-- language button-->
+											<li><a  class="scroll"><span> 
+                                        <button id="language" data-text-swap="English">Italiano</button></span></a></li>
+                                             <!-- language script-->
+                                            <script type="text/javascript">
+                                            
+                                                    var button = document.getElementById("language");
+                                                    button.addEventListener('click', function() {
+                                                      if (button.getAttribute("data-text-swap") == button.innerHTML) {
+                                                        button.innerHTML = button.getAttribute("data-text-original");
+                                            <!--English Menu-->   
+                                                    //document.getElementById("home").innerHTML = "HOME";     
+                                            <!--English About US-->
+                                                          document.getElementById("aboutUs1").innerHTML = "Dafne Art Project is an Irish provider of Art related services to businesses such as big corporations, small companies, hotels and offices.";
+                                                          document.getElementById("aboutUs2").innerHTML = "We aspire to foster the appreciation of shapes, colors and designs that can change the atmosphere of work places and urban spaces. Our portfolio boasts a range of over a hundred international artists from London, Rome, Paris, Dublin, Amsterdam and Moscow.";
+                                                          document.getElementById("aboutUs3").innerHTML = "We aim to collaborate with architects, construction firms and galleries in Europe to provide high value Art works,murales,sculptures etc to final clients.";
+                                                          document.getElementById("language").style.backgroundImage = "url('images/flags/italianIcon20_16.png')";
+                                            <!--English Quotes--> 
+                                                          document.getElementById("languageQuotes").innerHTML = "Where the spirit does not work with the hand, there is no Art.";
+                                            <!--Italian-->
+                                                      } else {
+                                                        button.setAttribute("data-text-original", button.innerHTML);
+                                                        button.innerHTML = button.getAttribute("data-text-swap");
+                                            <!--Italian Menu-->   
+                                                    //document.getElementById("home").innerHTML="INIZIO";
+                                           <!--Italian About US-->               
+                                                          document.getElementById("aboutUs1").innerHTML = "Dafne Art Project e' una societa' irlandese che fornisce servizi correlati all'arte alle imprese, piccole compagnie, uffici professionali e alberghi.";
+                                                          
+                                                          document.getElementById("aboutUs2").innerHTML = " Cio` a cui aspiriamo e`incoraggiare l'apprezzamento di nuove forme, colori e design e dimostrare come riescano a cambiare l'atmosfera nei luoghi di lavoro e negli spazi urbani. Il nostro portfolio vanta piu` di cento artisti provenienti dalle principali capitali europee: Londra, Roma, Amsterdam, Parigi, Dublino ect";
+                                                          
+                                                          document.getElementById("aboutUs3").innerHTML ="Puntiamo a collaborare con architetti, arredatori d'interni e compagnie di costruzione a cui fornire opere d'arte di alto valore, murales, sculture megalitiche ect ai loro clienti.";
+                                                        
+                                                          document.getElementById("language").style.backgroundImage = "url('images/flags/britishIcon20_16.png')";
+                                                          
+                                            <!--Italian Quotes--> 
+                                                          document.getElementById("languageQuotes").innerHTML = "Là où l'esprit ne travaille pas avec la main, il n'y a pas d'art.";
+                                                      }
+                                                    }, false);
+ 
+                                            </script>
+        <!--language script-->
 										</ul>
 									</nav>
 									<script type="text/javascript">
@@ -175,19 +218,20 @@ $(document).ready(function(){
 						</div>
 					</div>
 			</header>
-			
-            <section id="about-section"> <!-- About Section -->
-			
+	<!-- about section------------------------------------------------------------------------------->			
+            <section id="about-section"> 
+	
 			<!-- this is dummy heading for W3-Validation approval you can remove it if you want -->
 			<h2 class="w3-validation">For W3 Validation</h2>
 			<!-- this is dummy heading for W3-Validation approval you can remove it if you want -->
-			
+	<!--Image about section-->	<!--	
 					<div class="container-fluid">  
 						<div class="row" id="about">
 							<div class="col-md-6 about_left">
 							     <a href="#" class="button-one about_btn button-type-one button-box">About Us</a>
 							</div>
-							<div class="col-md-6 about_right wow fadeInUp" data-wow-delay="0.0s">
+							<div class="col-md-6 about_right wow fadeInUp" data-wow-delay="0.0s"> 
+ <!--Image about section-->	                               
 								  <div class="about_text">
 										<img src="images/tatto.png" class="img-responsive" alt=""/>
 										<!--<h3>Here you may write a shot intorduction about yourself comapny and what you do.</h3>---> 
@@ -197,15 +241,20 @@ $(document).ready(function(){
 										<p id="aboutUs2">We aspire to foster the appreciation of shapes, colors and designs that can change the atmosphere of work places and urban spaces. Our portfolio boasts a range of over a hundred international artists from London, Rome, Paris, Dublin, Amsterdam and Moscow.</p>
                                         <br>
                                         <p id="aboutUs3">We aim to collaborate with architects, construction firms and galleries in Europe to provide high value Art works,murales,sculptures etc to final clients.</p>
+                                      <br> <br> <br> <br>  <br>
 								  </div>
+                <!--
 							</div>
 						</div> 
 					 
-					</div>  
+					</div>
+-->
             </section>
 
-            <section id="gallery-one-image-section"> <!-- About Gallery Part -->
-			
+            <section id="gallery-one-image-section">
+                
+                <!-- About Gallery Part -->
+<!--END of About Section ---------------------------------------------------------------------------------------------------------------------->				
 <!-- FIRST GALLERY ------------------------------------------------------------------------------------------------------------------------->
 			<h2 class="w3-validation">For W3 Validation</h2>
 					<div class="container-fluid">
@@ -526,16 +575,29 @@ $(document).ready(function(){
 										</ul> 
 									    <label class="arrow-icon1  arrow-icon1-r"> </label>
 								    </div>
-								    <div class="col-md-4 newsletter_grid team-grid-6 wow fadeInUp"  data-wow-delay="0.0s">
-									    <h3>Newsletter</h3>
-									    <p>Join thousands of other people subscribe to our news</p>
-                                        <p>We are sorry but this function is currently unavailable</p>
+								    <div class="col-md-4 newsletter_grid team-grid-6 wow fadeInUp bold"  data-wow-delay="0.0s">
+                                        
+									    <h3>Our Partners</h3>
+                                        <div class="partner1">
+                                        <div class="partners-logo"></div>
+                                        
+									    <p>Roberto Scalamandre` Studio Progetti</p>
+                                        </div>
+                                    
+                                        <div class="partner1">
+                                        <p><a href="http://theandiamoworld.com/">Andiamo! World </a></p>
+                                        </div>
+                                       <div class="partner1">
+                                        <p><a href="http://europartnerships.co.uk/">Europartnerships Ltd</a></p>
+                                        </div>
+                                        <!--
 										<div class="newsletter-div">
 										    <form class="newsletter">
 											    <input type="text" placeholder="Insert Email" >
 											    <input type="submit" value="Submit">
 										    </form>
 										</div>
+                                            -->
 									</div>
 								<div class="clearfix"> </div>
 							</div>
@@ -572,7 +634,7 @@ $(document).ready(function(){
 				<div class="container-fluidgallery wow fadeInDown" data-wow-delay="0.0s" id="gallery">
 					        <div class="row">
 								    <div class="gallery-title">
-									    <a href="#" class="button-one gallery_btn button-type-one button-box">Gallery</a>
+									    <a href="#" class="button-one gallery_btn button-type-one button-box">Galleries</a>
 								    </div>
 									<div class="gallery-two-row-one">
 											<ul class="gallery-grid-one gallery-grid-box">
@@ -582,15 +644,22 @@ $(document).ready(function(){
 														<div class="b-wrapper">
 																<div class="b-animate b-from-left b-delay03 ">
 																	<a href="images/photo-gallery/image-1.jpg" rel="prettyPhoto[pp_gal]">
+                                                                      
+                                                                        <!--
 																		<button class="zooming md-trigger">
 																			<img src="images/zoom.png" alt=""/>
 																		</button>
+                                                                        -->
 																	</a>
+                                                                     <h3 style="color:black;"><br><br><br>Art for Companies</h3>
+																	
+																	<!--
 																	<ul class="popup_links gallery-two-popup-links">
 																		<li><button><i class="link"></i></button></li>
 																		<li><button><i class="info"></i></button></li>
 																		<li><button><i class="like"></i></button></li>
 																	</ul>
+                                                                        -->
 																</div>
 														</div>
 													</div>
@@ -601,15 +670,21 @@ $(document).ready(function(){
 														<div class="b-wrapper">
 																<div class="b-animate b-from-left b-delay03 ">
 																	<a href="images/photo-gallery/image-2.jpg" rel="prettyPhoto[pp_gal]">
+                                                                      
+																		 <!--
 																		<button class="zooming md-trigger">
-																				<img src="images/zoom.png" alt=""/>
+																			<img src="images/zoom.png" alt=""/>
 																		</button>
+                                                                        -->
 																	</a>
+                                                                    <h3 style="color:black;"><br><br><br>Art for Professional Offices</h3>
+																	<!--
 																	<ul class="popup_links gallery-two-popup-links">
 																		<li><button><i class="link"></i></button></li>
 																		<li><button><i class="info"></i></button></li>
 																		<li><button><i class="like"></i></button></li>
 																	</ul>
+                                                                        -->
 																</div>
 														</div>
 													</div>
@@ -620,15 +695,21 @@ $(document).ready(function(){
 														<div class="b-wrapper">
 																<div class="b-animate b-from-left b-delay03 ">
 																	<a href="images/photo-gallery/image-3.jpg" rel="prettyPhoto[pp_gal]">
+                                                                        
+																		 <!--
 																		<button class="zooming md-trigger">
-																				<img src="images/zoom.png" alt=""/>
+																			<img src="images/zoom.png" alt=""/>
 																		</button>
+                                                                        -->
 																	</a>
+                                                                    <h3 style="color:black;"><br><br><br>Art for Public Spaces</h3>
+                                                                    <!--
 																	<ul class="popup_links gallery-two-popup-links">
 																		<li><button><i class="link"></i></button></li>
 																		<li><button><i class="info"></i></button></li>
 																		<li><button><i class="like"></i></button></li>
 																	</ul>
+                                                                        -->
 																</div>
 														</div>
 													</div>
@@ -638,12 +719,15 @@ $(document).ready(function(){
 											<div class="clearfix"></div>
 									</div>
 							</div>
+                    <!--
 							<div class="row">
 							    <div class="col-md-12">
 								    <div class="gallery-two-row-two wow fadeInLeft">
 									    <ul class="gallery-grid-two gallery-grid-box">
 										    <li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 4 -->
+                    <!--
+
 													    <img src="images/gallery-two-img4.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -663,6 +747,7 @@ $(document).ready(function(){
 										    </li>
 											<li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 5 -->
+                    <!--
 													    <img src="images/gallery-two-img5.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -682,6 +767,8 @@ $(document).ready(function(){
 										    </li>
 											<li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 6 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img6.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -701,6 +788,8 @@ $(document).ready(function(){
 										    </li>
 											<li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 7 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img7.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -720,6 +809,8 @@ $(document).ready(function(){
 										    </li>
 											<li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 8 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img8.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -739,8 +830,12 @@ $(document).ready(function(){
 										    </li>
 											
 											<!-- Only For Mobile -->
+                    
+                    <!--
 											<li class="mobile-display-on">
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 9 -->
+                                                    
+                                                    <!--
 													    <img src="images/gallery-two-img9.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -759,6 +854,8 @@ $(document).ready(function(){
 												</div>
 										    </li>
 											<!-- Only For Mobile -->
+                    
+                    <!--
 											
 										</ul>
 										<div class="clearfix"></div>
@@ -770,7 +867,7 @@ $(document).ready(function(){
 									<div class="gallery-two-row-three wow fadeInRight">
 									    <ul class="gallery-grid-three gallery-grid-box">
 										    <li class="mobile-display-off">
-												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 9 -->
+												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 9 -->  <!--
 													    <img src="images/gallery-two-img9.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -790,6 +887,8 @@ $(document).ready(function(){
 										    </li>
 											<li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 10 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img10.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -809,6 +908,8 @@ $(document).ready(function(){
 										    </li>
 											<li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 11 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img11.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -828,6 +929,8 @@ $(document).ready(function(){
 										    </li>
 											<li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 12 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img12.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -847,6 +950,8 @@ $(document).ready(function(){
 										    </li>
 											<li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 13 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img13.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -866,8 +971,12 @@ $(document).ready(function(){
 										    </li>
 											
 											<!-- Only For Mobile -->
+                    
+                    <!--
 											<li class="mobile-display-on">
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 14 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img14.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -887,6 +996,8 @@ $(document).ready(function(){
 										    </li>
 											<li class="mobile-display-on">
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 15 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img15.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -905,7 +1016,9 @@ $(document).ready(function(){
 												</div>
 										    </li>
 											<!-- Only For Mobile -->
-											
+								
+                    
+                    <!--
 										</ul>
 										 <div class="clearfix"></div>
 									</div>
@@ -917,6 +1030,8 @@ $(document).ready(function(){
 									    <ul class="gallery-grid-four gallery-grid-box">
 										    <li class="mobile-display-off">
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 14 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img14.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -936,6 +1051,8 @@ $(document).ready(function(){
 										    </li>
 											<li class="mobile-display-off">
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 15 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img15.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -955,6 +1072,8 @@ $(document).ready(function(){
 										    </li>
 											<li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 16 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img16.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -974,6 +1093,9 @@ $(document).ready(function(){
 										    </li>
 											<li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 17 -->
+                    
+                    
+                    <!--
 													    <img src="images/gallery-two-img17.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -993,6 +1115,8 @@ $(document).ready(function(){
 										    </li>
 											<li>
 												<div class="b-link-stripe b-animate-go thickbox"> <!-- Gallery image no : 18 -->
+                    
+                    <!--
 													    <img src="images/gallery-two-img18.jpg" class="gallery-two-image img-responsive" alt=""/>
 														<div class="b-wrapper">
 															<div class="b-animate b-from-left b-delay03 ">
@@ -1015,6 +1139,7 @@ $(document).ready(function(){
 									</div>
 								</div>
 							</div>
+-->
 							<div class="md-overlay"></div><!-- the overlay element -->
 		
 				</div>
@@ -1036,14 +1161,15 @@ $(document).ready(function(){
 										<div class="contact-info">
 												<ul class="contact-list-one">
 												   <li><h5>Info:</h5></li>
-												   <li>Phone : <span class="bold">+ 123-456-789-456</span></li>
-												   <li>Fax : <span class="bold">+ 123-456-789-456</span></li>
-												   <li>Email : <a href="mailto:"> daphneartproject@hotmail.com</a></li>
+												   <li>Phone : <span class="bold">000000000000000</span></li>
+												   <li>Fax : <span class="bold">00000000000000000</span></li>
+												   <li>Email 1: <a href="mailto:">elsa@dafneproject.com</a></li>
+                                                   <li>Email 2: <a href="mailto:"> anthony@dafneproject.com</a></li>
 												   <li>Address : <span class="bold">1234 Street Road, City Name</span></li>
 												</ul>
 												<ul class="contact-list-two">
 												   <li><h5>Work Hours:</h5></li>
-												   <li>Monday-Sunday : <span class="bold">Irregular Working Hours - Make an Appointment</span></li>
+												   <li>Monday-Sunday : <span class="bold">Email to make an Appointment</span></li>
                                                     <!--
 												   <li>Saturday : <span class="bold">09am - 1pm</span></li>
 												   <li>Sunday : <span class="bold">closed</span></li>
@@ -1052,7 +1178,7 @@ $(document).ready(function(){
 												<div class="clearfix"> </div>
 										</div>
 										<ul class="contact-social">
-											<li><a href="<p>Join thousands of other people subscribe to our news</p>"> <i class="fb"> </i> </a></li>
+											<li><a href="https://www.facebook.com/dafneartproject/"> <i class="fb"> </i> </a></li>
 											<li><a href=""><i class="tw"> </i> </a></li>
 											<li><a href=""><i class="tumb"> </i> </a></li>
 											<li><a href=""><i class="linked"> </i> </a></li>
@@ -1062,6 +1188,7 @@ $(document).ready(function(){
 									</div>
 									<div class="col-md-5 wow fadeInRight">
 										<div class="contact-form">
+                                            <span class="bold">We are sorry but email function is currently unnavailable.</span>
 									<form id="my_form" onsubmit="submitForm(); return false;">
 												<input type="text" class="textbox" id="n" placeholder="Name" required>
 												<input type="text" class="textbox" id="e" placeholder="Email Address" required>
