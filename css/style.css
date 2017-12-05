@@ -5,11 +5,16 @@ ul, ol {margin: 0;
 text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;}
 p {margin: 0;}
 html, body{
- font-family: 'Noticia Text', serif;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+/* font-family: 'Noticia Text', serif;*/
    font-size: 100%;
    background:#fff; 
 }
 
+.logo{
+    max-height: 10%;
+    max-width: 10%;
+}
 .responsive-logo{
     height: auto; 
     width: auto; 
@@ -77,7 +82,8 @@ button {
     */
     
     padding: 10px 5px 5px 34px;
-    font-family: Arial, Verdana;   
+    /*font-family: Arial, Verdana;   */
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
     background: url(../images/flags/italianIcon20_16.png);
     background-position: 10px 14px;
     background-repeat: no-repeat;
