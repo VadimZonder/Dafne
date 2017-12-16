@@ -2,14 +2,18 @@ h4, h5, h6,
 h1, h2, h3 {margin-top: 0;}
 ul, ol {margin: 0;
  
-text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;}
+/*text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/}
 p {margin: 0;}
 html, body{
-    font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
+    font-family: 'Roboto', sans-serif;
+    /*font-family: 'Montserrat', sans-serif;
+    font-family: Helvetica Neue,Helvetica,Arial,sans-serif;*/ 
 /* font-family: 'Noticia Text', serif;*/
    font-size: 100%;
    background:#fff; 
 }
+
+a { color: inherit; } 
 
 .logo{
     max-height: 10%;
@@ -27,8 +31,9 @@ html, body{
 }
 
 #twitter-section p{
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  font-size: 24px;  
+  /*text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
+  font-size: 34px;  
+  
 }
 body a{
 	transition:0.5s all;
@@ -45,15 +50,19 @@ button {
 .w3-validation {
     display: none !important;
 }
+
 .button-one {
 	border: none;
-	font-family: inherit;
+	font-family: 'Montserrat', sans-serif;
 	font-size: inherit;
 	color: inherit;
-	background-color: #000000;
-	cursor: pointer;
-	padding: 20px 70px;
+    cursor: pointer;
+    /*
+	background-color: white;
+	
+	padding: 20px 70px; */
 	display: inline-block;
+   
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: 700;
@@ -64,9 +73,10 @@ button {
 	transition: all 0.3s;
 }
 .button-type-one {
-    color: #ffffff;
+    color: black;
     font-size: 45px;
 }
+
 
 #language{
       width: auto ;
@@ -100,7 +110,7 @@ button {
 	background-position: center;
 	position: relative;
 	min-height:500px;
-    border-bottom-style: solid;
+    /*border-bottom-style: solid;*/
 }
 
 /*
@@ -130,7 +140,7 @@ button {
 /*------start-top-nav------*/
 .top-nav {
 	position:relative;
-	margin-top: 1.5em;
+	margin-top: 1.0em;
  
 }
 .nav { width:100%;}
@@ -146,7 +156,8 @@ ul.nav-list li a {
 	        text-decoration: none; 
 			text-transform: uppercase;
 	        color:#000;
-	        font-size:18px;
+	        font-size:22px;
+    font-family: 'Roboto', sans-serif;
 	        -webkit-transition: all 0.5s ease;
 			-moz-transition: all 0.5s ease;
 			-o-transition: all 0.5s ease;
@@ -199,6 +210,7 @@ ul.nav-list li a:hover { color:#333333; border-bottom: 3px solid #000000; paddin
   position: relative;
   z-index: 1;
 }
+/*
 .button-box:hover:after {
 	width: 100%;
 	opacity: 1;
@@ -208,7 +220,7 @@ ul.nav-list li a:hover { color:#333333; border-bottom: 3px solid #000000; paddin
     border: 10px solid #000000;
     overflow: hidden;
     color: #000000;
-}
+}*/
 .button-box:after {
 	width: 0;
 	height: 103%;
@@ -221,6 +233,7 @@ ul.nav-list li a:hover { color:#333333; border-bottom: 3px solid #000000; paddin
 	-ms-transform: translateX(-50%) translateY(-50%);
 	transform: translateX(-50%) translateY(-50%);
 }
+
 .button-one:after {
 	content: '';
 	position: absolute;
@@ -434,7 +447,7 @@ i.like{
 	height: 30px;
 	display: inline-block;
 }
-/*--testmonial--*/
+/*--testmonial----------------------------------------------------------------------testmonial/Quotes--*/
 #testimonial-section {
     display: block;
 	overflow: hidden;
@@ -459,6 +472,7 @@ i.like{
 	height: 40px;
 	background: url(../images/icons.png) no-repeat -148px -6px;
 	left:14em;
+    
 }
 .testimonial span.quotes-down {
 	position: absolute;
@@ -467,19 +481,23 @@ i.like{
 	height: 40px;
 	background: url(../images/icons.png) no-repeat -232px -6px;
 	right: 14em;
+ 
+   
 }
 .testimonial p {
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-    /*color: #f2efe5;*/
-    color:black;
-    /*background-color: white;*/
-    font-size: 22px;
+   /*text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+   /*  color: #f2efe5;*/
+    color:white;
+    /*background-color: white;
+     font-style: italic;*/
+    font-size: 30px;
     font-style: italic;
-    line-height: 22px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 32px;
     margin-top: 135px;
     text-align: center;
     text-indent: 20px;
-	padding: 0px 42px;
+	padding: 0px 22px;
 	font-weight: bold;
 }
 .test_wrap{
@@ -549,13 +567,31 @@ i.like{
 
 .partner1{
  
-    
-      	width: 335px;
+    float:left; 
+   width: 600px;
 	height: 142px;
+     padding:20px 20px;
+    text-align:center
+    
 }
+
+.partner1.1{
+ text-align: center;
+vertical-align: middle;
+line-height: 90px;
+   
+   width: 600px;
+	height: 142px;
+     padding:20px 20px;
+    text-align:center
+    
+}
+
 .partners-logo {
   	width: 135px;
 	height: 140px;
+    margin-left:30px;
+   
     
 	display: block;
 	background: url(../images/partners-logo.jpg)no-repeat; 
@@ -563,6 +599,9 @@ i.like{
 	background-position: center;
     float:right;
     
+}
+.container-partner{
+   
 }
 ul.social{
 	padding:0;
@@ -734,13 +773,13 @@ ul.social li a i.google:hover{
 	line-height:1.5em;
 	margin-bottom:3em;
 }
-/*--twitter--*/
+/*--twitter--_______________________________________________________________________TWITTER*/
 #twitter-section {
     display: block;
 	overflow: hidden;
 }
 .twitter-div{
-	background: url(../images/twitter-background.jpg)no-repeat center top;
+	background: url(../images/twitter-background.jpg)no-repeat center top; 
 	background-size: 100% 100%;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -750,6 +789,7 @@ ul.social li a i.google:hover{
 	min-height:350px;
 	padding-top:7em;
 	text-align:center;
+       
 }
 i.tw_icon{
 	width: 45px;
@@ -791,6 +831,7 @@ i.tw_icon{
     overflow: hidden;
     width: 60%;
 	min-height: 270px;
+    
 }
 .gallery-two-row-two{
     padding: 0;
@@ -798,6 +839,7 @@ i.tw_icon{
     overflow: hidden;
     width: 100%;
 	min-height: 270px;
+    
 }
 .gallery-two-row-three{
     padding: 0;
@@ -818,11 +860,13 @@ i.tw_icon{
 	height: 100%;
 	display: block;
 	overflow: hidden;
-    border: 2px solid grey;
+     border: 3px solid silver;
+    /*border: 3px solid white;*/
 }
 ul.gallery-grid-box {
 	padding: 0;
 	list-style: none;
+    
 }
 ul.gallery-grid-one li {
 	width: 33.33%;
